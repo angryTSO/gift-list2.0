@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.4.12",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "dns": "^0.2.2",
+    "fs": "^0.0.1-security",
+    "mongodb": "^5.7.0",
+    "mongodb-stitch-browser-sdk": "^4.8.0",
+    "mongoose": "^7.4.1",
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
   }
 }

@@ -1,0 +1,25 @@
+/* styles/Registration.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   max-width: fit-content;
+    background-color: lightgrey; /* Gray background color */
+    border-radius: 10px; 
+    text-align: center;
+    color: red;/* Rounded corners */
+  }
+  
+  .registration-form {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    border-style: inset;
+    
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
