@@ -1,17 +1,14 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import Link from 'next/link';
-import styles from '@/styles/index.module.css'; // Import the CSS module
+import Link from 'next/link'; // Import Link from Next.js
+import styles from '@/styles/index.module.css';
 
 const Home = () => {
-  // State to handle form input (username and password)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Function to handle form submission (not implemented yet)
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Add your logic to handle form submission (e.g., login)
     console.log('Form submitted!');
   };
 
@@ -58,6 +55,12 @@ const Home = () => {
             Create username
             </Link>
             </button>
+
+            <button type="button">
+  <Link href="/listPage">
+    List Page
+  </Link>
+</button>
           </form>
          
         </div>
