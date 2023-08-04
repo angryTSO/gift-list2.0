@@ -133,15 +133,23 @@
     color: #FF0000;
   }
 
-  .info-container {
+  .info-container, .img {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
     
   }
+  .submitted-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; /* Center horizontally and vertically */
+    display: block; /* Remove any extra spacing below the image */
+  }
 
   .info-item {
+    
     background: gray;
     border-radius: 5px;
     padding: 10px;
@@ -150,10 +158,7 @@
     max-width: 300px;
     flex: 1 0 300px;
   }
-  .img{
-    max-width: 150px;
-    max-height: 25px;
-  }
+ 
 
   .delete-button {
     display: inline-block;

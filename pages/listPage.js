@@ -136,7 +136,7 @@ const ListPage = () => {
               <strong>Price:</strong> {infoItem.price} <br />
               <strong>Image:</strong>
               <br />
-              <img src={infoItem.imagePreview} alt="Submitted Image" />
+              <img className={styles['submitted-img']} src={infoItem.imagePreview} alt="Submitted Image" />
               
               
             </div>
