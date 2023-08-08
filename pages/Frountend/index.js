@@ -22,11 +22,7 @@ const Home = () => {
         </div>
       </header>
       <main className={styles.main}>
-      <button type="button">
-            <Link href="/registration">
-            Create username
-            </Link>
-            </button>
+      
             <button type="button">
             <Link href="/profile">
             profile
