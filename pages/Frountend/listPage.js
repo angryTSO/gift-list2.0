@@ -89,7 +89,7 @@ const ListPage = () => {
                 value={selectedStore}
                 onChange={(e) => setSelectedStore(e.target.value)}
               >
-                <option value="">Select a store</option>
+                <option value="">Select a Person</option>
                 <option value="mc">Mc</option>
                 <option value="sj">SJ</option>
                 <option value="asa">ASA</option>
@@ -130,8 +130,9 @@ const ListPage = () => {
             <div className={styles['info-item']} key={index}>
             <span className={styles['popup-exit']} onClick={() => deleteInfoItem(index)}>
                 <FaTimes />
-              </span>
-              <strong>Store:</strong> {infoItem.store} <br />
+              </span><br></br>
+              
+              <strong>Person:</strong> {infoItem.store} <br />
               <strong>URL:</strong> {infoItem.url} <br />
               <strong>Price:</strong> {infoItem.price} <br />
               <strong>Image:</strong>
