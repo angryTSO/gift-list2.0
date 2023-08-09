@@ -1,84 +1,93 @@
-/* styles/Home.module.css */
+/* styles/index.module.css */
 .container {
   text-align: center;
-  padding: 2rem;
+ 
+  max-width: auto;
+  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Align children vertically */
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  background-color: lightgray;
+  background-color: gray;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid  lightgray;
-  border-radius: 20px;
+  border-bottom: 1px solid gray;
 }
 
 .logo {
   flex: 1;
   text-align: left;
-}
-
-.userIcon img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.main {
-  margin-top: 4rem;
-}
-
-.redirectBtn a {
-  text-decoration: none;
-  color: lightcoral;
-}
-
-.redirectBtn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.container {
-  text-align: center;
-  padding: 2rem;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  background-color: lightgray;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.logo {
-  flex: 1;
-  text-align: left;
-}
-
-.searchBar {
-  flex: 2; /* Adjust as needed */
-  padding: 0.5rem;
-}
-
-.searchBar input {
-  width: 65%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 20px;
 }
 
 .userIcon {
-  flex: 1;
-  text-align: right;
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 2rem;
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+}
+
+.main {
+  margin-top: 2rem;
+}
+
+.redirectBtn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.redirectBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Light Mode Styles */
+.lightMode {
+  background-color: white;
+  color: #333;
+}
+
+.lightMode .header {
+  background-color: gray;
+  color: white;
+}
+
+.lightMode .userIcon {
+  color: #333;
+}
+
+.lightMode .toggleButton {
+  color: #333;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .header {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .userIcon {
+  color: white;
+}
+
+.darkMode .toggleButton {
+  color: white;
 }
