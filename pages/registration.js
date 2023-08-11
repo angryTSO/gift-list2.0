@@ -2,16 +2,17 @@ import { useState } from 'react';
 import Head from 'next/head';
 import axios from 'axios'; // Import axios for making HTTP requests
 
-const Registration = () => {
+export default function Registration() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [retypePassword, setRetypePassword] = useState('');
+  const [passwordMatchError, setPasswordMatchError] = useState(false);
 
   const handleRegistration = async (e) => {
     e.preventDefault();
 
     if (password !== retypePassword) {
-      alert('Passwords do not match.');
+      setPasswordMatchError(true);
       return;
     }
 
@@ -36,7 +37,6 @@ const Registration = () => {
     <>
       <Head>
         <title>Registration Page</title>
-     
       </Head>
       <div className="container">
         <h1>Registration Page</h1>
@@ -75,6 +75,10 @@ const Registration = () => {
               onChange={(e) => setRetypePassword(e.target.value)}
             />
 
+            {passwordMatchError && (
+              <p style={{ color: 'red' }}>Passwords do not match.</p>
+            )}
+
             <button type="submit" className="submit-btn">
               Register
             </button>
@@ -83,6 +87,4 @@ const Registration = () => {
       </div>
     </>
   );
-};
-
-export default Registration;
+}

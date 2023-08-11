@@ -8,6 +8,17 @@ const Home = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const [mode, setMode] = useState('light'); // 'light' or 'dark'
+
+  const toggleMode = () => {
+    setMode(mode === 'light' ? 'dark' : 'light');
+  };
+
+  const containerClassName = `${styles.container} ${
+    mode === 'dark' ? styles.darkMode : styles.lightMode
+  }`;
+
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
@@ -34,6 +45,9 @@ const Home = () => {
 
   return (
     <>
+    <button onClick={toggleMode} className={styles.toggleButton}>
+          Toggle Mode
+        </button>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,6 +58,7 @@ const Home = () => {
         <div className={styles['login-form']}>
           <h2>Login</h2>
           <form onSubmit={handleFormSubmit}>
+         
             <label htmlFor="username">Username:</label>
             <input
               type="text"
@@ -77,6 +92,7 @@ const Home = () => {
             <button type="button">
               <Link href="/listPage">List Page</Link>
             </button>
+            
           </form>
         </div>
       </div>
