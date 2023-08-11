@@ -1,0 +1,31 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Homepage</h1>
+    <div class="login-form">
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="button" class="profile-btn" onclick="redirectToProfile()">Create Profile Page</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function redirectToProfile() {
+      // Replace 'profile.html' with the path to your profile page
+      window.location.href = 'registration.js';
+    }
+  </script>
+</body>
+</html>
