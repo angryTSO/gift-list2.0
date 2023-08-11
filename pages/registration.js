@@ -122,51 +122,35 @@ export default function Register() {
 
 /*import { useState } from 'react';
 import Head from 'next/head';
-
+import axios from 'axios'; // Import axios for making HTTP requests
 
 const Registration = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [retypePassword, setRetypePassword] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleRegistration = async (e) => {
     e.preventDefault();
 
-    // Check if password and retypePassword match
     if (password !== retypePassword) {
       alert('Passwords do not match.');
       return;
     }
 
-    // Create a new user object
-    const newUser = {
-      firstName,
-      lastName,
-      email,
-      password,
-    };
-
     try {
-      // Connect to the MongoDB database
-      const client = await MongoClient.connect('mongodb+srv://Cluster21379.ygrme2n.mongodb.net/<Users>?retryWrites=true&w=majority', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+      const response = await axios.post('/api/register', {
+        username,
+        password,
       });
-      
-      // Access the database and collection
-      const db = client.db('mongodb+srv://Cluster21379.ygrme2n.mongodb.net/<Users>?retryWrites=true&w=majority');
-      const collection = db.collection('mongodb+srv://Cluster21379.ygrme2n.mongodb.net/<Users>?retryWrites=true&w=majority');
 
-      // Insert the new user into the collection
-      const result = await collection.insertOne(newUser);
-      console.log('New user added:', result.ops[0]);
-
-      // Close the connection to the database
-      client.close();
+      if (response.status === 200) {
+        alert('User registered successfully!');
+      } else {
+        alert('Error registering user.');
+      }
     } catch (error) {
-      console.error('Error connecting to the database:', error);
+      console.error('Error registering user:', error);
+      alert('Error registering user.');
     }
   };
 
@@ -174,43 +158,21 @@ const Registration = () => {
     <>
       <Head>
         <title>Registration Page</title>
-        <link rel="stylesheet" href="styles.css" />
+     
       </Head>
       <div className="container">
         <h1>Registration Page</h1>
         <div className="registration-form">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name:</label>
+          <form onSubmit={handleRegistration}>
+            <label htmlFor="username">Username:</label>
             <input
               type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="Enter your first name"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
               required
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-
-            <label htmlFor="lastName">Last Name:</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Enter your last name"
-              required
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email address"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
 
             <label htmlFor="password">Password:</label>
@@ -236,7 +198,7 @@ const Registration = () => {
             />
 
             <button type="submit" className="submit-btn">
-              Submit
+              Register
             </button>
           </form>
         </div>

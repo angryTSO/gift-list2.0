@@ -1,0 +1,21 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: lightblue;
+    align-items: center;
+  }
+  
+  /* Add a local class to make the h1 selector pure */
+  .title {
+    color: #333;
+  }
+  
+  .login-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Add other CSS styles as needed */
+  

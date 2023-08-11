@@ -1,21 +1,93 @@
+/* styles/index.module.css */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    color: lightblue;
-    align-items: center;
-  }
-  
-  /* Add a local class to make the h1 selector pure */
-  .title {
-    color: #333;
-  }
-  
-  .login-form {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Add other CSS styles as needed */
-  
+  text-align: center;
+ 
+  max-width: auto;
+  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+}
+
+.header {
+  background-color: gray;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.logo {
+  flex: 1;
+  text-align: left;
+}
+
+.userIcon {
+  font-size: 2rem;
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+}
+
+.main {
+  margin-top: 2rem;
+}
+
+.redirectBtn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.redirectBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Light Mode Styles */
+.lightMode {
+  background-color: white;
+  color: #333;
+}
+
+.lightMode .header {
+  background-color: gray;
+  color: white;
+}
+
+.lightMode .userIcon {
+  color: #333;
+}
+
+.lightMode .toggleButton {
+  color: #333;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .header {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .userIcon {
+  color: white;
+}
+
+.darkMode .toggleButton {
+  color: white;
+}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+
 const Home = () => {
   const redirectToProfile = () => {
     // Replace '/profile' with the path to your profile page

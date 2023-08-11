@@ -1,0 +1,128 @@
+/* styles/profile.module.css */
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: salmon;
+    max-width: auto;
+  }
+  
+  .header {
+    background-color: gray;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+  }
+  
+  .logo {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .backLink a {
+    text-decoration: none;
+  }
+  
+  .main {
+    margin-top: 2rem;
+  }
+  
+  .profileForm {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .existingInfoContainer {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .updateInputsContainer {
+    flex: 1;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: rgba(211, 211, 211, 0.471);
+    border-radius: 20px;
+  }
+  
+  .profileLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profileInput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .profilePicture {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+  .existingInfoContainer {
+    flex: 1;
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.471);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .existingInfoText {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    
+  }
+  
+  .existingProfilePicture {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  .lightMode {
+    background-color: salmon;
+  }
+  
+  .lightMode .header {
+    background-color: gray;
+    color: white;
+  }
+  
+  .lightMode .profileForm {
+    background-color: gray;
+    color: white;
+  }
+  
+  .lightMode .existingInfoContainer {
+    background-color: rgba(211, 211, 211, 0.471);
+  }
+  
+  /* Dark Mode Styles */
+  .darkMode {
+    background-color: black;
+  }
+  
+  .darkMode .header {
+    background-color: black;
+    color: white;
+  }
+  
+  .darkMode .profileForm {
+    background-color: black;
+    color: white;
+  }
+  
+  .darkMode .existingInfoContainer {
+    background-color: rgba(100, 100, 100, 0.471);
+  }
