@@ -18,4 +18,47 @@
   }
   
   /* Add other CSS styles as needed */
-  
+  .toggleButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+  }
+  /* Light Mode Styles */
+.lightMode {
+  background-color: white;
+  color: #333;
+}
+
+.lightMode .container {
+  background-color: gray;
+  color: white;
+}
+
+.lightMode .userIcon {
+  color: #333;
+}
+
+.lightMode .toggleButton {
+  color: #333;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .header {
+  background-color: black;
+  color: white;
+}
+
+.darkMode .userIcon {
+  color: white;
+}
+
+.darkMode .toggleButton {
+  color: white;
+}
