@@ -1,0 +1,8 @@
+{"version":"0.1.0","name":"gift-list2",
+"dependencies":{"axios":{"version":"1.4.0"},
+"bcrypt":{"version":"5.1.0"},"dns":{"version":"0.2.2"},
+"fs":{"version":"0.0.1-security"},
+"mongodb-stitch-browser-sdk":{"version":"4.8.0"},
+"mongodb":{"version":"5.7.0"},"mongoose":{"version":"7.4.1"},
+"next":{"version":"13.4.12"},"react-dom":{"version":"18.2.0"},
+"react-icons":{"version":"4.10.1"},"react":{"version":"18.2.0"}}}
